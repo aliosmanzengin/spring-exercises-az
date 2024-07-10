@@ -9,9 +9,15 @@ public class SpringExerciseApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Greeter greeter = context.getBean(Greeter.class);
 
-        greeter.greet();  // Should print "Hello, World"
-        greeter.greet("Alice");  // Should print "Hello, Alice"
+        Greeter greeter1 = context.getBean(Greeter.class);
+
+        greeter1.greet();  // Should print "Hello, World"
+
+        Greeter greeter2 = context.getBean(Greeter.class);
+        greeter2.greet("Ali");  // Should print "Hello, Alice"
+
+        System.out.println(greeter1 == greeter2); //false, it will be true if Greeter class wont have //@Scope("prototype")
+
     }
 }

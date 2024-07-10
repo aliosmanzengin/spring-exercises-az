@@ -9,17 +9,12 @@ import org.springframework.stereotype.Component;
 public class Greeter {
     private String name;
 
-    public Greeter() {
-
-    }
-
-    public Greeter(String name) {
+    private Greeter(String name) {
         this.name = name;
     }
 
-    @Value("${name:World}") // Injects the value from application.properties or defaults to "World"
-    public void setName(String name) {
-        this.name= name;
+    public static Greeter getInstance(String name) {
+        return new Greeter(name);
     }
 
     public void greet(String name) {
