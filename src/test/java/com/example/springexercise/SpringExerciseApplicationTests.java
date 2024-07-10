@@ -1,2 +1,4 @@
-package com.example.springexercise;public class SpringExerciseApplicationTests {
+package com.example.springexercise;
+
+public class SpringExerciseApplicationTests {
 }
