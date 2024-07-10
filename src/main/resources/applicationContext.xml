@@ -4,8 +4,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- Load application.properties -->
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:application.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Greeter bean definition with setter injection -->
     <bean id="greeter" class="org.example.springexercise.Greeter">
-        <constructor-arg value="World"/>
+        <property name="name" value="${name}" />
     </bean>
 
 </beans>
