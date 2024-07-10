@@ -10,11 +10,11 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan(basePackages = "org.example.springexercise")
 @PropertySource("classpath:application.properties")
 public class AppConfig {
-    @Value("${name:World}") //Inject the value from application.properties or defaults to "World"
-    private String name;
-
-    @Bean
-    public Greeter greeter() {
-        return Greeter.getInstance(name);
-    }
+//    @Value("${name:World}") //Inject the value from application.properties or defaults to "World"
+//    private String name;
+//
+//    @Bean
+//    public Greeter greeter() {
+//        return Greeter.getInstance(name);
+//    }
 }
