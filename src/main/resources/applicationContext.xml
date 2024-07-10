@@ -5,17 +5,17 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Load application.properties -->
-    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>classpath:application.properties</value>
-            </list>
-        </property>
-    </bean>
+<!--    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
+<!--        <property name="locations">-->
+<!--            <list>-->
+<!--                <value>classpath:application.properties</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
 
-    <!-- Greeter bean definition with setter injection -->
-    <bean id="greeter" class="org.example.springexercise.Greeter">
-        <property name="name" value="${name}" />
-    </bean>
+<!--    &lt;!&ndash; Greeter bean definition with setter injection &ndash;&gt;-->
+<!--    <bean id="greeter" class="org.example.springexercise.Greeter">-->
+<!--        <property name="name" value="${name}" />-->
+<!--    </bean>-->
 
 </beans>
